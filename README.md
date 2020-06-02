@@ -1,4 +1,5 @@
 
 # zootechdrum
 
-https://img.shields.io/badge/Honor-Github-yellow
+[!Badge_for_twiiter](https://img.shields.io/badge/social-Twitter-red)
+
