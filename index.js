@@ -38,6 +38,7 @@ var fs = require("fs");
 var util = require("util");
 var inquirer = require("inquirer");
 var generateMarkdown = require("./utils/generateMarkdown");
+generateMarkdown.helloWorld();
 // The built-in util package can be used to create Promise-based versions of functions using node style callbacks
 var readFileAsync = util.promisify(fs.readFile);
 var writeFileAsync = util.promisify(fs.writeFile);

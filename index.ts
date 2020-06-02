@@ -3,6 +3,8 @@ const util = require("util");
 const inquirer = require("inquirer");
 const  generateMarkdown = require("./utils/generateMarkdown")
 
+generateMarkdown.helloWorld()
+
 //Interface for what the questions array should look like
 interface questionObj {
     type: string,

@@ -5,4 +5,8 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+function helloWorld(){
+  console.log("Hello Wrld")
+}
+
+module.exports = {generateMarkdown, helloWorld}
