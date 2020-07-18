@@ -30,11 +30,18 @@ const questions: questionObj[] = [
     name: "description",
     message: "Please provide a description of the project",
   },
+  {
+    type: "input",
+    name: "technology",
+    message:
+      "What were the technologies used for the project? Please seperate technology by comma",
+  },
 ];
 
 async function init() {
   try {
     const response = await inquirer.prompt(questions);
+    console.log(response);
 
     await writeFileAsync("README.md", generateMarkdown(response), "utf8");
   } catch (err) {

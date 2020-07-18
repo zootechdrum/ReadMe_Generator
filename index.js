@@ -45,12 +45,22 @@ var questions = [
     {
         type: "input",
         name: "name",
+        message: "What is your GitHub userName?"
+    },
+    {
+        type: "input",
+        name: "title",
         message: "What is name of your Project?"
     },
     {
         type: "input",
         name: "description",
         message: "Please provide a description of the project"
+    },
+    {
+        type: "input",
+        name: "technology",
+        message: "What were the technologies used for the project? Please seperate technology by comma"
     },
 ];
 function init() {
@@ -63,6 +73,7 @@ function init() {
                     return [4 /*yield*/, inquirer.prompt(questions)];
                 case 1:
                     response = _a.sent();
+                    console.log(response);
                     return [4 /*yield*/, writeFileAsync("README.md", generateMarkdown(response), "utf8")];
                 case 2:
                     _a.sent();
