@@ -38,7 +38,6 @@ var fs = require("fs");
 var util = require("util");
 var inquirer = require("inquirer");
 var generateMarkdown = require("./utils/generateMarkdown");
-generateMarkdown.helloWorld();
 // The built-in util package can be used to create Promise-based versions of functions using node style callbacks
 var readFileAsync = util.promisify(fs.readFile);
 var writeFileAsync = util.promisify(fs.writeFile);
@@ -46,8 +45,13 @@ var questions = [
     {
         type: "input",
         name: "name",
-        message: "What is your  GitHUb UserName?"
-    }
+        message: "What is name of your Project?"
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Please provide a description of the project"
+    },
 ];
 function init() {
     return __awaiter(this, void 0, void 0, function () {

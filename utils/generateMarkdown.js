@@ -1,12 +1,8 @@
 function generateMarkdown(data) {
+  console.log(data.name);
   return `
 # ${data.name}
 
 `;
 }
-
-function helloWorld(){
-  console.log("Hello Wrld")
-}
-
-module.exports = {generateMarkdown, helloWorld}
+module.exports = generateMarkdown;
