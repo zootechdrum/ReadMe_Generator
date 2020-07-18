@@ -18,6 +18,11 @@ const questions: questionObj[] = [
   {
     type: "input",
     name: "name",
+    message: "What is your GitHub userName?",
+  },
+  {
+    type: "input",
+    name: "title",
     message: "What is name of your Project?",
   },
   {
