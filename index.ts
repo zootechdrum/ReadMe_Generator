@@ -36,13 +36,21 @@ const questions: questionObj[] = [
     message:
       "What were the technologies used for the project? Please seperate technology by comma",
   },
+  {
+    type: "input",
+    name: "altText",
+    message: "Please provide Alt Text for Gif",
+  },
+  {
+    type: "input",
+    name: "filePath",
+    message: "Please provide file path to Gif",
+  },
 ];
 
 async function init() {
   try {
     const response = await inquirer.prompt(questions);
-    console.log(response);
-
     await writeFileAsync("README.md", generateMarkdown(response), "utf8");
   } catch (err) {
     console.log(err);

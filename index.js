@@ -62,6 +62,16 @@ var questions = [
         name: "technology",
         message: "What were the technologies used for the project? Please seperate technology by comma"
     },
+    {
+        type: "input",
+        name: "altText",
+        message: "Please provide Alt Text for Gif"
+    },
+    {
+        type: "input",
+        name: "filePath",
+        message: "Please provide file path to Gif"
+    },
 ];
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -73,7 +83,6 @@ function init() {
                     return [4 /*yield*/, inquirer.prompt(questions)];
                 case 1:
                     response = _a.sent();
-                    console.log(response);
                     return [4 /*yield*/, writeFileAsync("README.md", generateMarkdown(response), "utf8")];
                 case 2:
                     _a.sent();

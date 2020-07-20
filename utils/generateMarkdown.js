@@ -12,7 +12,14 @@ function createTechUsedList(technology) {
   return newList;
 }
 
-function generateMarkdown({ name, title, description, technology }) {
+function generateMarkdown({
+  name,
+  title,
+  description,
+  technology,
+  altText,
+  filePath,
+}) {
   return `
 # ${title}
 
@@ -26,6 +33,8 @@ ${createTechUsedList(technology)}
 [![Generic badge](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://shields.io/)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/${name})
 
+## Animated Gif
+![${altText}](${filePath})
 `;
 }
 module.exports = generateMarkdown;
